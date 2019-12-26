@@ -12,7 +12,7 @@ public class ThreadDemo2 {
 	}
 }
 
-class MyThread1 extends A implements Runnable,Serializable{
+class MyThread1 extends A implements Runnable{
 
 	@Override
 	public void run() {
