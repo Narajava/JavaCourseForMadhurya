@@ -1,0 +1,78 @@
+Why Threading :
+===============
+
+Introduction:
+=============
+
+  Multithreading is a Java feature that allows concurrent execution of two or more parts of a program for maximum utilization of CPU. Each part of such program is called a thread. 
+  So, threads are light-weight processes within a process.
+  
+Different ways of creating thread in java:
+=========================================  
+
+Threads can be created by using two ways :
+1. Extending the Thread class
+2. Implementing the Runnable Interface
+
+ThreadScheduler :
+start() method :
+run() method:
+
+Thread Life Cycle :
+=================
+
+A thread goes through various stages in its life cycle. 
+
+(New/Born)===>(Ready/Runnable)===>Running====>(Dead)
+
+New : MyThread t=new MyThread();
+Ready : t.start()
+Running : If scheduler allocates CPU 
+Dead : if run methods completes CPU
+
+Different methods :
+==================
+We can prevent the execution of a thread by using one of the following methods of Thread class.
+yield() : 
+The yield() method of thread class causes the currently executing thread object to temporarily pause and allow other threads to execute.
+join() :
+
+When we invoke the join() method on a thread, the calling thread goes into a waiting state. It remains in a waiting state until the referenced thread terminates.
+
+
+sleep() :
+========
+wait() :
+notify() :
+notifyAll() :
+
+Can assign names:
+=================
+setName(String name)
+getName()
+
+================:
+Thread Priority :
+================
+1....10
+1= Least
+10= Highest
+
+default priority = 5
+
+getPriority(),setPriority(int priority);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
