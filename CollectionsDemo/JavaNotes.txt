@@ -1,0 +1,1261 @@
+Why Java?
+
+> Java is used to develop enterprise and large scale web applications.
+Ex:- insurence & banking
+
+Java Editions & Versions :
+==========================
+
+> JAVASE(J2SE), J2EE,J2ME
+
+1.5
+1.6
+1.7
+Java8
+Java9
+===========================
+Java software installation :
+
+Jdk(develop+Run Test) & JRE (To Run the application)
+
+===========================
+
+Compiler :
+=========
+It converts from Highlevel to low-level (binary language)
+
+
+================================================================
+JAVA features :-
+===============
+=> JAVA is platform independent :
+=================================
+
+Platform Dependent : If any programming lanuguage compilation code is specific to Platform (OS & Processor) is called platform dependent.
+Ex : - C language
+
+Platform Independent : If any programming lanuguage compilation code is not specific to Platform (OS & Processor) is called platform independent.
+If compilation code of any programming language can be executed under any operating system irrespective of under which it has been compiled.
+Java produces byte code (.class files)
+
+ JVM : It is a program /application it executes byte code. converts byte code into machine understandable format and get it executed by processor.<
+
+>>javac <ProgramName>.java   (compilation)
+>>java <ProgramName>         (execution)
+NOTE : We can execute java program only if it contains main method.
+
+=> OOPS :-
+=========
+-> Encapsulation (abstarction,class)
+->Inheritence
+->Polymorphism
+
+Ex: - Smalltalk, Java
+
+=============================================OOPS======================================================================
+Setting Java path to recognize java software by OS:
+===================================================
+
+Path : It is a environment variable used to inform about our software installation.
+
+Java naming conventions:-
+========================
+
+File name : 
+
+We save java files with <classname>.java extension (highly recommended ). 
+if the class is "public" you must save it with same as class name.
+If the class contains public static void main (String []a) method then class must be public.
+
+class name :
+
+It should be starts with capital letter.
+
+Ex:- HelloWorld
+
+variables :
+
+Should start with lowercase letter.
+
+Ex:- accountNumber, message;
+
+methods :
+
+Should start with lowercase letter.
+Ex:- displayAccountDetails(), showMessage(), getInfo()
+
+
+keywords/reserved words:
+========================
+
+In java all keywords are lowercase words.
+
+50 keywords.
+
+datatypes:
+=========
+byte
+short
+int
+long
+float
+double
+
+char-'A'
+
+boolean-true/false
+
+Object :
+
+class
+new
+
+Access Modifiers:
+==================
+
+public
+private
+protected
+final
+
+Conditinal keywords:
+====================
+if
+else
+
+for
+while
+do while
+
+Exception :
+
+try, catch,finally
+
+
+===Built-in classes/Predefined classes =======
+
+=> you get all the classes as a jar (java archive) file.
+=> you can check this jar file in C:\Program Files\Java\jdk1.8.0_171\jre\lib
+=> Ex:- System, String (java.lang)....
+
+=========OOPS==========
+Encapsulation :-
+===============
+
+The concept of binding data and methods into a single unit is called as "Encapsulation".
+
+The wrapping of data members and member functions into a single unit is called as "Encapsulation".
+
+
+class A {
+
+int a;
+
+void add(){
+-----
+}
+
+}
+
+Why Encaspulation :-
+==================
+
+There is insecurity with POP language like c. Because there is concept called global variables which makes it insecure.
+
+
+int accNo;
+
+int empId;
+
+main(){
+
+
+}
+
+getCustomerAccountDetails(){
+
+empID=123;
+}
+
+displayEmployeeDetails(){
+
+}
+
+fun3(){
+
+}
+
+
+
+class Customer{
+
+int accNo;
+
+
+void getCustomerAccountDetails(){
+
+
+}
+
+}
+
+
+
+
+class Employee{
+
+int empId;
+
+displayEmployeeDetails(){
+
+}
+
+}
+
+=====================================
+Object :-
+======
+
+An instance of a class.
+
+instance : Runtime memory allocation in a main memory/primary memory (RAM)
+
+All the non-static members(data + methods) loaded into instance.
+
+In java we use "new" keyword is used to create the object.
+
+syntax to create Object:
+
+<className> referenceVariable=new <className>();
+
+A a1=new A();
+
+B obj=new B();
+
+================================================================================
+
+varibles :-
+
+3 types of variables in java
+
+1. Local variables : Any variables which we declare inside a method / as method parameters are called as local variables.
+   Ex:-
+           void add(){
+            int a;
+           }
+
+          void sub(int num1,int num2){
+            
+           }
+
+2. instance variables/non-static variables/fileds : Any variables which defined in a class scope without static keyword are called as non-static variables.
+Ex:-
+
+public class ObjectDemo1{
+
+
+int a=10;  //comment : non-static variable
+
+static int x=11;
+
+void showValue(){
+System.out.println("a value"+a);
+} 
+
+}
+
+
+
+
+
+
+
+3. static variables/Class variables :Any variables which defined in a class scope with static keyword are called as non-static variables.
+Ex:-
+
+
+
+public class ObjectDemo1{
+
+
+int a=10;  //comment : non-static variable
+
+static int x=11;
+
+void showValue(){
+System.out.println("a value"+a);
+} 
+
+static void showValue1(){
+System.out.println("a value"+a);
+}
+
+}
+
+NOTE : static keyword can be used with methods as well. We call those methods as static methods.
+
+What is the difference between static and non-static members:
+
+============================================================================
+
+Eclipse : IDE
+
+Static members will be loaded into context of class in memory.
+
+Whenever we create a new object everytime Object initilized with it's initial values.
+
+Static members will not be affected with Object creation.
+
+Default initialization :-
+========================
+
+
+byte(1),short(2),int(4),long(8)---0
+
+float(4),double(8)----0.0
+
+char(2)---Empty white space
+
+boolean--dependent on JVM ---- false
+
+** Default initilization is applicable for class level variables and it's not applicable for local variables..
+** The default value for uninitilized object is null;
+** The default value for user defined class/built-in class is null;
+
+=============================================================
+Representing Object in several ways:-
+====================================
+
+** We can declare object of one class as instance variable of another class.
+class A{
+B b1=new B();
+int a=10;
+
+
+
+
+}
+
+
+** We can declare object of one class as static variable of another class.
+
+class System{
+
+static PrintStream out=new PrintStream();
+
+
+}
+
+class PrintStream {
+
+void println(String a){
+
+}
+
+}
+
+** We can define Object of one class as parameter to a method.
+
+class A{
+
+void createOrder(Order order){
+
+}
+}
+
+Java bean/POJO class:-
+=====================
+
+=> class which is having setters & getters
+=> We use it to just hold the data.
+
+
+** We can define Object of one class as return type of a method.
+
+=============================================================================
+Inheritance :-
+=============
+
+The concept of getting the properties from parent to child is called as "inheritance".
+
+We can implement inheritence with help of "extends" keyword.
+
+class B extends A{
+
+
+}
+
+=> class B is going to be child class to class A.
+=> We can call parent class properties (memebrs & methods) with child class object by inheritance.
+=> "Object" class is super class for all the java classes. In java every class is child class of Object class directly/indirectly.
+
+Overriding:-
+
+The concept of child class oveririding parent class method when it is not satisfied with parent class methods.
+
+constructors:
+
+=> constructor is nothing but functionality and it's get executed only when object created.
+
+=> constructor name should be same as class name.
+
+=> constructor should not have any return type.
+
+=> **By default all the java classes contains default zero-argument constructor generated by compiler if class doesn't have explixit constructor.
+
+
+public void add(){
+
+---
+---
+}
+
+calling : object.add();
+
+class Addition{
+
+public Addition(){
+----
+----
+}
+
+
+}
+
+A a1=new A();
+
+Addition addition=new Addition();
+
+Polymorphism :
+=============
+
+The concept of representing one thing in many froms is called as "polymorphism".
+
+1. compile time/static polymorphism
+2. runtime/dynamic polymorphism
+
+1. compile time poly : Overloading
+2. dynamic poly: Overriding
+
+===============================
+
+add(int a,int b){
+
+}
+
+sum(int a,float b){
+
+}
+
+add1(float a,float b){
+
+}
+
+========================
+Overloading : The concept of defining multiple methods with same name associated with diff arguments with in same class is called as Overloading.
+===========
+
+void add(int a,int b){
+
+}
+
+void add(int a,int b,int c){
+
+}
+
+void add(int a,float b){
+
+}
+
+void add(float a,float b){
+
+}
+
+
+================================
+
+implicit type casting:
+
+byte-->short-->int-->float-->double
+                  -->long
+
+
+float type casting:
+====================
+by default all the real numbers are considered as "double" data type in java.
+
+10.1
+
+double d=10.1;
+
+float f=(float)10.1;
+
+float f1=10.1f;
+
+float f2=19;
+
+===========================
+
+child object & parent object (type casting):
+===========================================
+
+******
+We can assign child class object to the parent class refererence variable and with the parent class we can call methods only present in it.
+
+A a1=new B();
+
+a1.can call methods present in class A.
+
+HttpServlet
+--doGet()
+--doPost()
+   
+
+StudentServlet extends HttpServlet{
+
+doGet(){
+----
+----
+}
+}
+
+HttpServlet hs=<>;
+hs.doGet();
+
+
+
+When we are creating object for a class always parent class constructor get executed first.
+
+When we are calling methods with parent class reference variable if method is exist in parent class it doesn't get executed rather it try to search in child objects and execute it.
+
+In every constructor there is hidden statement super() exists and it invokes super class constructor.
+
+
+this (It rep current Object):
+
+  We have 2 usages with this keyword.
+
+1. When we have naming conflicts between local variables and instance variables, in order to represent instance variables we use this. keyword.
+2. When we want to call constructor from another constructor we use this(). 
+
+
+
+super (It represents parent class Object):
+
+1. When we have naming conflicts between super class variables and sub class varibles , to represent super class varibles we use super. keyword.
+2. We can call super class constructor by using super() .
+
+
+====================================================================
+
+interfaces :
+===========   
+
+concrete method / concrete class
+ A method which is fully implemented.
+
+  syntax : 
+
+   public void add(){
+-----
+}
+
+abstract method / abstarct class (can contains both abstarct & concrete methods/ only can contain abstarct methods/only can contain concrete methods***)
+
+A method which doesn't have body or which is not implemnted.
+
+syntax:
+
+ public abstract void add(); 
+
+
+interfaces are used to define specification and it contains only abstract methods.
+
+We have 2 keywords for interfaces concept.
+
+interface
+implements 
+
+interfaces helps to provide loose coupling.
+
+abstraction : Hiding implementation details and showing only what are necessary
+
+
+
+abstarct class   :
+
+A class which contains both abstarct and concreate methods Or can contains only abstract methods / can contain only concreate methods is called as abstarct class. 
+
+
+Exception Handling:
+==================
+
+Exception : 
+An exception is a runtime error which causes abnormal termination of program execution.
+
+Developer must handle the exception to avoid abnormal termination of program execution.
+
+=> When JVM can't handle runtime situations it creates and throws respective Exception Object and if programmer not handling that Exception Object then it return back to the JVM and JVM stops execution abnormally.
+
+Handling :
+=========
+
+try :
+ We put all the statements which proven to generate exception inside try block.
+
+catch :
+Whenever exception occured in try block respective catch block will catch that exception and exceutes catch block.
+
+scope/resulution :
+==================
+if/else/try{
+//if you defined new variable here can access only with in this block.
+//to avoid this declare outside and initialize inside.
+
+}
+
+
+catch(AE e){
+
+}
+catch(NPE e){
+
+}
+catch(Exception e){
+
+}
+
+
+1.
+
+try{
+
+}catch(){
+
+}
+
+2. Invalid
+try{
+
+}
+------------
+catch(){
+
+}
+
+3. try{
+
+}finally{
+-----
+}
+
+4.
+
+try {
+---------
+---------
+try{
+-----
+}catch(Exception e){
+
+}
+
+
+}catch(Exception e){
+
+}
+
+finally:-
+========
+
+final keyword:-
+==============
+
+final keyword can be used with variables , methods & classes.
+
+=> varible become constant means value can't be changed.
+=> methods can't be overridden.
+=> calsses can't be extended.
+
+finally :-
+=========
+=> try get executed only if there is no exception.
+try{
+----
+----
+---- E
+----
+
+}
+=> catch get exeecuted if there is a exception.
+
+finally : 
+
+This get executed irrespective whether exception occured or not.
+
+  => We close database connections 
+  => we close resource connections.
+
+
+
+throws :-
+=======
+Whenever we want to postpone the exception handling to the caller we use the throws keyword with method declaration.
+
+
+
+=> checked vs unchecked :
+========================
+
+Unchecked Exception  : RuntimeException & it's child classes and Error and  it's child classes are called as unchecked exceptions.
+
+Java compiler doesn't force programmer t keep try and catch and it doesn't gives you error.
+
+
+
+throw :  
+
+This keyword is used to raise the exception explicitly by the programmer. This exception can be a predefined exception / custom exception.
+
+
+class A{
+
+psvm(){
+
+if(number == 0){
+throw new ArithmaticException("Value Zero");
+}
+
+
+
+}
+
+}
+
+
+UserDefined Exceptions/CustomException :-
+=======================================
+
+
+Exception :
+
+=> All the exceptions are objects
+
+Handling :-
+========
+
+try
+
+catch
+
+finally
+
+throw
+
+throws
+
+checked and unchecked
+
+Exception hirerchy
+
+packages :
+
+
+In java we have a keyword called "package". Infact this is the first valid executable statement in java class. It gives seperate namespace.
+
+Packages are used to bind/gorup the related classes.
+
+student, faculty, librarian, library 
+
+It is like a normal directory where directory stores related stufff inside of it.
+
+The diffrerence b/w normal directory and package is that if we take out anything from package it doesn't work outside package but file directory does.
+
+synatx : com.companyname.projectname.moudulename.submodulename.
+com.dhl.bems.dataelements.service;
+
+
+A.java :
+========
+package edu.nara.corajava.basics;
+
+public class A{
+-----
+-----
+} 
+
+Fully qulified class name : edu.nara.corajava.basics.A;
+
+"import" keyword is used to access the classes outside the package.
+
+rt.jar :
+======
+
+All our predifined java classes are stored in different packages.
+
+java.lang
+java.util
+java.io
+
+
+access modifiers/access specifiers :
+====================================
+
+public :-
+=======
+class,methods,varibles
+=> It is accessible from anywhere.
+
+private :-
+=========
+methods,varibles
+
+It can be accesses with in the same class.
+
+default :
+=========
+if we don't define any modefier then it becomes default.
+
+default will act as public with in the same package and it act as private outside the package.
+
+package1;
+
+class A{
+
+}
+
+package1;
+class B{
+can access A;
+}
+
+
+package2;
+class Test{
+
+you can't access A/B;
+}
+
+protected :
+===========
+
+It is similar to default except that in one scenario it can be accessed outside the package i.e, with respect to child class object.
+
+java.lang.String:-
+================
+
+String is group/sequence of characters/ it is predefined class coming from java library (from java.lang package).
+
+=> String is immutable object.
+
+=> Immutable : Once object created the state can't be changed means it is final.
+
+ state : varibles/data 
+
+ behavior: methods/functions
+
+=> We can create String in 2 ways.
+
+1 :
+
+  String str="Narasimha";
+
+2 :
+
+  String str=new String("Madhurya");
+
+=> What is the diffrence b/w == and equals() method with respect to String?
+
+Ans: == compares address of 2 objects where as equals() method compare the content of two objects.
+
+   How String created with new operator??
+
+Sol : Object->
+===
+hashCode()
+equals()
+
+String class overriding both these methods..
+
+it generates hashcode for content hence we are getting same number.
+
+Contract between equals() && hashCode():
+========================================
+
+=> If two objects are equals, their hashcode must be same.
+=> If two objects hashcode same , they may or  mayn't equals.
+
+
+=================Multi Threading=====================
+
+Why :
+to reduce / to eliminate idle time of CPU.
+
+there are I/O statements :- CPU needs to handover these statements to DMA. DMA circuit can execute these IO statements. 
+.
+1----
+2----
+3---- I/O
+4----
+5----
+
+
+What :
+
+Executing two independent tasks at same time is called multitasking.
+
+1. Process based multi tasking
+    O/s level
+2. Thread based multi tasking
+  Programming level
+
+How :
+
+1. extending Thread class
+2.by implementing Runnable interface.
+
+=> We have to override run() method. 
+
+
+class MyThread extends Thread{
+
+@Override
+public void run(){
+------
+------
+}
+
+}
+
+
+=> In java one file can contains more than one java class but there should only one public class and name should be saved with that public class.
+
+A.java:
+=======
+
+class B{}
+class C{}
+public class A{
+}
+
+
+class A extends B,C (B,C are classes) : INVALID
+
+interface X extends M,Y (M,Y=intefaces) : VALID
+
+class A implments X: VALID
+
+interface Z implemnts A: INVALID
+
+interface M extends A: INVALID
+
+class A extends B implemnts X,Y: VALID
+
+class A implemnts X,Y extends B: INVALID
+
+interface X extend M : VALID
+
+==============================================================
+
+Thread :
+========
+
+join():
+=======
+Is used to pause the execution of current calling thread untill called thread finishes it's execution.
+
+
+synchronization/Thread safety:-
+=============================
+When 2 or more threads operating same object and manipulating the data there is every chance of inconsitency ocuurs on data.
+
+"synchronized" keyword is used to handle this situation.
+
+Interthread communication :
+===========================
+
+T1--> do some task and give contrrol to other Thread T2 and it waits untill T2 return the control.
+
+wait();
+
+notify();
+
+A a1=new A();
+a1.fun1();
+
+a1.fun2();
+
+a1.fun3();
+
+
+
+
+
+
+
+Type casting:
+============
+
+A a1=new B();
+
+B b1=(B)a1;
+
+=================================================================
+
+Arrays :-
+=======
+
+int a, b;
+
+
+Array is the object that stores of group of values of similar datatype with fixed size.
+
+Initialization : int a[]=new int[8];
+
+int[] a=new int[8];
+
+int []a=new int[7];
+
+Assigning the values based on index :
+
+a[0]=200;
+..a[8]=300;=> ArrayIndexOutBoundsException
+
+
+
+a.length : 8
+
+
+String[] strArray=new String[5];
+
+Reading the values :
+===================
+
+
+Annanymous array:
+
+int a[]= {1,2,3,4,5};
+
+
+Command Line Arguments :
+========================
+
+We pass the arguments to main method from command prompt during running the program.
+
+>javac 
+
+> java A Nara Simha Swamy
+
+>java A 1 2 3
+
+String str="1";
+
+=============================
+
+Collection Framework/java.util package :
+=========================================
+
+=> It represents group of objects as single unit.
+
+=> These are growable in size at runtime.
+
+=> These can accept both homogenius and heterogenius elements.
+
+============
+
+Collection(I): It is main interface for collection framework
+
+List(I)
+
+Set(I)
+
+Queue(I)
+
+
+Map(I)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
