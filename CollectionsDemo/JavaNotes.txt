@@ -1060,12 +1060,34 @@ Collection Framework/java.util package :
 => These are growable in size at runtime.
 
 => These can accept both homogenius and heterogenius elements.
-
 ============
 
 Collection(I): It is main interface for collection framework
 
-List(I)
+List(I) :-
+
+1. maintain the elements in sequential order.
+
+2. It accepts duplicate values and null values.
+
+add()
+get()
+
+Vector (C)-> Legacy
+
+ArrayList (C)->
+
+
+Differences :-
+==============
+Vector (Security) :-
+========
+ThreadSafety --- less performance
+
+ArrayList:-
+==========
+Non-ThreadSafe && high performance
+
 
 Set(I)
 
