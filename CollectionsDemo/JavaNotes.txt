@@ -1089,12 +1089,64 @@ ArrayList:-
 Non-ThreadSafe && high performance
 
 
-Set(I)
+Set(I) :-
+======
+
+=>Duplicates doesn't allowed
+=>Null value can be added only once.
+=>Elements are unique
+=>Sorting order possible
+=>Doesn't maintain insertion order
+
+HashSet(C):-
+===========
+=>Duplicates doesn't allowed
+=>Null value can be added only once.
+=>Elements are unique
+
+
+LinkedHashSet(C):-
+================
 
 Queue(I)
 
 
 Map(I)
+
+Collections(C) :
+=============
+
+It is a utility class to help to convert non-synchronized collections to synchronized collection.
+
+ArrayList
+HashMap
+
+Al synchronizedal=Collections.synchronizedList(al);
+
+HM synchronizedhm=Collections.synchronizedMap(hm);
+
+Wrapper classes:
+================
+
+In java to represent all primitive datatypes as objects we have given warapper classes in java library.
+
+int- Integer
+byte- Byte
+.....
+
+int i=8;
+
+Integer i=new Integer(8);
+
+int i=Ingeger.parseXXX(String val);
+XXX
+
+
+
+
+
+
+
 
 
 
